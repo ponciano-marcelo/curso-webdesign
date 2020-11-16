@@ -1,0 +1,14 @@
+
+plugins
+
+Color picker
+color hilighter
+auto file name
+css extended completions
+docBlocker
+html5
+placeholder
+jquery
+css snippets
+console warp for js
+

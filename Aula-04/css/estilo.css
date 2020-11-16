@@ -1,0 +1,177 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+header {
+	height: 50px;
+	background-color: black;
+}
+ 
+.container > img {
+	height: 50px;
+	margin-top: 0;
+	margin: o auto;
+}
+
+header h1 {
+	display: inline;
+	color: white;
+	margin-left: 20px;
+	font-size: 28px;
+	height: 50px;
+	vertical-align: 15px;
+}
+
+.container {
+	width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+
+article {
+	padding: 10px;
+	border: 1px solid black;
+	width: 370px;
+	height: 550px;
+	float: left;
+	margin-right: 20px;
+}
+
+article img {
+	height: 150px;
+	display: block;
+	margin-bottom: 10px;
+	padding: 0;
+	margin-left: 70px;
+}
+article h1 {
+	background-color: gray;
+	color: white;
+	text-align: center;
+	line-height: 2.5;
+	margin: -10px;
+	margin-bottom: 0px;
+	font-weight: normal;
+	font-size: 28px;
+}
+
+.preco {
+	padding: 5px;
+	font-size: 20px;
+	color: red;
+	margin-bottom: 7px;
+}
+
+article h2 {
+	color: black;
+	text-align: left;
+	line-height: 2.5;
+	margin: -5px 5px;
+	margin-bottom: -15px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+article p {
+	text-align: justify;
+	font-size: 20px;
+	margin: 20px 0;
+	padding: 0;
+	height: 140px;
+}
+
+
+article > footer {
+	text-align: center;
+	margin-top: 5px;
+  }
+
+.botao {
+	display: inline-block;
+	border: 3px solid green;
+	padding: 5px 20px;
+	background-color: green;
+	color: white;
+	font-weight: bold;
+	border-radius: 10px;
+	align-items: flex-end;
+	text-decoration: none;
+	transition: all 0.3s ease 0s;
+	margin-top: 5px;
+  }
+
+  .botao:hover, .botao:focus {
+	display: inline-block;
+	border: none;
+	padding: 10px 25px;
+	background-color: red;
+	color: lightgray;
+	font-weight: bold;
+	border-radius: 20px;
+	align-items: flex-end;
+	text-decoration: none;
+	transition: all 0.3s ease 0s;
+  }
+
+main {
+	padding: 50px 0;
+}
+
+main::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.container table {
+	align-content: center;
+	margin: -20px auto;
+	width: 300px;
+}
+
+aside {
+	top: 0px;
+	left: 0px;
+	padding: 10px;
+	width: 300px;
+	height: 100%;
+	position: absolute;
+	float: inline-start;
+	background-color: silver;
+}
+
+nav ul{
+	list-style: none;
+	padding: 5px;
+	font-size: 20px;
+}
+nav ul li {
+	padding-bottom: 20px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	
+}
+
+#perfil {
+	font-size: 20px;
+}
+
+.desativar_menu {
+	display: none;
+}
+
+.menu {
+	margin-top: 5px;
+	width: 30px;
+	height: 35px;
+	float: right;
+}
