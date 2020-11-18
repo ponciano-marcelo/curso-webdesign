@@ -1,0 +1,140 @@
+<!Doctype html>
+<html>
+<!-- Início do link do CSS  -->
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./fonts/tcm.ttf">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Loja de Roupas</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    <!--Nesta parte mudei o width: de 1000px para auto; com aumentar o dimensão da tela dos slides e height: 400px para aumentar a altura dos slides  -->
+        <style>
+            #divslider {
+                height: 400px;
+                width: auto;
+                border: 1px solid #000;
+                transition: 1s;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .btnslider{
+                background-color: rgba(0,0,0,0.1);
+                height: 30%;
+                color: #fff;
+                cursor: pointer;
+                /*sumir a borda mesmo quando clicar */
+                outline: none;
+                margin: 10px;
+                border:none;
+                transition: all 1s;
+            }
+
+            .btnslider:hover{
+                background-color: rgba(0,0,0,0.8);
+                transition: all 1s;
+            }
+
+            #divload{
+                width:100%;
+                height: 5px;
+                margin-top: 25%;
+                border: 1px solid rgba(255,255,255,0.3);
+    
+            }
+
+            #divbarra{
+                width: 0%;
+                height: 100%;
+                background-color: #fff;
+            }
+
+        </style>
+ <!--Neste SCRIPT foram criadas as variáveis e as funções para realizar o controle de transição e carregamento das imagens dos slides. Alterei a linha ...if(tempoTroca>=200){... de100 para 300 para ter um pouco de retardo na transição das imagens -->
+
+        <script type="text/javascript">
+            var imgs=[];
+            var slider;
+            var imgAtual;
+            var maxImg;
+            var tmp;
+            var tempoTroca;
+            var vtempo;
+            var divbarra;
+    
+            function preCarregamento() {
+                var s=1;
+                for(var i=0;i<5;i++){
+                    imgs[i]= new Image();
+                    imgs[i].src="imgs/s"+s+".jpg";
+                    s++;
+                }
+            }
+            function carregarImg(img){
+    
+                slider.style.backgroundImage="url('"+imgs[img].src+"')";
+            
+            }
+    
+            function inicia(){
+                preCarregamento();
+                imgAtual=0;
+                maxImg=imgs.length-1;
+                slider=document.getElementById("divslider");
+                divbarra=document.getElementById("divbarra");
+                carregarImg(imgAtual);
+                tempoTroca=0;
+                anima();
+                
+            }
+            function troca(dir){
+                tempoTroca=0;
+                imgAtual +=dir;
+                if(imgAtual>maxImg){
+                    imgAtual=0;
+                } else if(imgAtual<0){
+                    imgAtual=maxImg;
+                }
+                carregarImg(imgAtual);
+            }
+    
+            function anima(){
+                tempoTroca++;
+                if(tempoTroca>=500){
+                    tempoTroca=0;
+                    troca(1);
+                }
+                   vtempo=tempoTroca/5;
+                   divbarra.style.width=vtempo+"%";
+                   window.requestAnimationFrame(anima);
+                   
+                }
+                window.requestAnimationFrame(anima);
+    
+            }
+             
+            window.addEventListener("load", inicia);
+        
+        </script>
+
+</head>
+<!-- Final do link do CSS  -->
+
+ <!--Nesta DIV foram criada dentro do corpo da página com as setas de voltar onclick="troca(-1) e próximopróximo slide onclick="troca(1), sobre as imagens -->
+<body>
+    <div id="divslider">
+        <button class="btnslider" onclick="troca(1);">></button>
+
+        <div id="divload">
+            <div id="divbarra">
+                
+            </div>
+        </div>
+        <button class="btn-slider" onclick="troca(1);"><</button>
+    </div>
+</body>
+</html>
