@@ -22,7 +22,7 @@
                 align-items: center;
             }
 
-            .btnslider{
+            .btnslider {
                 background-color: rgba(0,0,0,0.1);
                 height: 30%;
                 color: #fff;
@@ -34,7 +34,7 @@
                 transition: all 1s;
             }
 
-            .btnslider:hover{
+            .btnslider:hover {
                 background-color: rgba(0,0,0,0.8);
                 transition: all 1s;
             }
@@ -113,9 +113,8 @@
                    window.requestAnimationFrame(anima);
                    
                 }
-                window.requestAnimationFrame(anima);
     
-            }
+            
              
             window.addEventListener("load", inicia);
         
@@ -127,14 +126,14 @@
  <!--Nesta DIV foram criada dentro do corpo da página com as setas de voltar onclick="troca(-1) e próximopróximo slide onclick="troca(1), sobre as imagens -->
 <body>
     <div id="divslider">
-        <button class="btnslider" onclick="troca(1);">></button>
+        <button class="btnslider" onclick="troca(-1);"><</button>
 
         <div id="divload">
             <div id="divbarra">
                 
             </div>
         </div>
-        <button class="btn-slider" onclick="troca(1);"><</button>
+        <button class="btnslider" onclick="troca(1);">></button>
     </div>
 </body>
 </html>
