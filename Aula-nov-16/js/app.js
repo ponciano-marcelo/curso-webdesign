@@ -42,7 +42,7 @@ function troca (inc) {
 }
 
 function anima() {
-    tempoTroca++
+    tempoTroca++;
 
     if(tempoTroca >=500){
         tempoTroca=0;

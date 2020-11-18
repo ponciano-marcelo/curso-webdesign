@@ -3,8 +3,8 @@
 <!-- Início do link do CSS  -->
 
 <head>
-    <link rel="stylesheet" type="text/css" href="./fonts/tcm.ttf">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./fonts/tcm.ttf"> -->
+   <!--  <link rel="stylesheet" type="text/css" href="css/style.css"> -->
     <title>Loja de Roupas</title>
 
     <meta charset="UTF-8">
@@ -44,13 +44,12 @@
                 height: 5px;
                 margin-top: 25%;
                 border: 1px solid rgba(255,255,255,0.3);
-    
             }
 
             #divbarra{
                 width: 0%;
                 height: 100%;
-                background-color: #fff;
+                background-color: rgba(60, 60, 63, 0.4);
             }
 
         </style>
@@ -74,6 +73,7 @@
                     s++;
                 }
             }
+
             function carregarImg(img){
     
                 slider.style.backgroundImage="url('"+imgs[img].src+"')";
@@ -81,7 +81,9 @@
             }
     
             function inicia(){
+
                 preCarregamento();
+                
                 imgAtual=0;
                 maxImg=imgs.length-1;
                 slider=document.getElementById("divslider");
@@ -92,31 +94,37 @@
                 
             }
             function troca(dir){
+                
                 tempoTroca=0;
+
                 imgAtual +=dir;
+
                 if(imgAtual>maxImg){
                     imgAtual=0;
                 } else if(imgAtual<0){
                     imgAtual=maxImg;
                 }
+
                 carregarImg(imgAtual);
+
             }
     
             function anima(){
+
                 tempoTroca++;
+
                 if(tempoTroca>=500){
                     tempoTroca=0;
                     troca(1);
                 }
-                   vtempo=tempoTroca/5;
-                   divbarra.style.width=vtempo+"%";
-                   window.requestAnimationFrame(anima);
+
+                vtempo=tempoTroca/5;
+                divbarra.style.width=vtempo+"%";
+                window.requestAnimationFrame(anima);
                    
                 }
-    
-            
-             
-            window.addEventListener("load", inicia);
+
+                window.addEventListener("load", inicia);
         
         </script>
 
