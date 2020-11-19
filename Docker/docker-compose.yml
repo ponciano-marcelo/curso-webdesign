@@ -1,0 +1,9 @@
+web:
+  image: nginx
+  volumes:
+   - /Users/mps/Box Sync/web-design/www:/usr/share/nginx/html
+  ports:
+   - "80:80"
+  environment:
+   - NGINX_HOST=localhost
+   - NGINX_PORT=80
