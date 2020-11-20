@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --------------------------------- */
+/*            CONTAINER              */
+/* --------------------------------- */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas: 
+    "cabecalho cabecalho"
+    "principal principal"
+    "rodape rodape";
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+/* --------------------------------- */
+/*            CABEÇALHO              */
+/* --------------------------------- */
+
+.cabecalho {
+    grid-area: cabecalho;
+    display: flex;
+    line-height: 50px;
+    
+    background-color: black;
+}
+
+.cabecalho__logo {
+	height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.cabecalho__texto {
+    margin-left: 20px;
+    height: 50px;
+    
+    color: white;
+    
+    font-size: 28px;
+}
+
+.cabecalho__botao {
+    position: absolute;
+    right: 100px;
+}
+
+.cabecalho__botao img { 
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
+    
+    border: 1px solid white;
+}
+
+
+/* --------------------------------- */
+/*                MAIN               */
+/* --------------------------------- */
+
+.principal {
+    grid-area: principal;
+}
+
+/* --------------------------------- */
+/*            ANÚNCIOS               */
+/* --------------------------------- */
+
+.anuncios {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.anuncios__produto {
+    display: flex;
+    flex-direction: column;
+	padding: 10px;
+	border: 1px solid black;
+    width: 33%;
+    height: 70vh;
+}
+
+.anuncios__produto__imagem {
+    width: 20vh;
+    height: 20vh;
+	margin-bottom: 10px;
+	padding: 0;
+	margin-left: 70px;
+}
+
+.anuncios__produto__texto {
+	margin: -10px;
+	margin-bottom: 0px;
+    
+    background-color: gray;
+	color: white;
+	text-align: center;
+	line-height: 2.5;
+	font-weight: normal;
+}
+
+.anuncios__produto__preco {
+	padding: 5px;
+	margin-bottom: 7px;
+    
+    font-size: 20px;
+	color: red;
+}
+
+.anuncios__produto__descricao {
+	margin: -5px 5px;
+	margin-bottom: -15px;
+    
+    color: black;
+    text-align: left;
+	line-height: 2.5;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.anuncios__produto__texto-descricao {
+	margin: 20px 0;
+	padding: 0;
+
+    text-align: justify;
+	font-size: 20px;
+}
+
+
+.anuncios__produto__rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    margin-block-start: auto;
+  }
+
+/* --------------------------------- */
+/*          BOTÃO ANÚNCIO            */
+/* --------------------------------- */
+
+.botao {
+
+	border: 3px solid green;
+	padding: 5px 20px;
+    border-radius: 10px;
+
+    background-color: green;
+	color: white;
+	font-weight: bold;
+
+	transition: all 0.3s ease 0s;
+  }
+
+  .botao:hover, .botao:focus {
+	border: none;
+	padding: 10px 25px;
+	border-radius: 20px;
+	align-items: flex-end;
+
+    background-color: red;
+	color: lightgray;
+
+    font-weight: bold;
+	text-decoration: none;
+
+    transition: all 0.3s ease 0s;
+  }
+
+/* --------------------------------- */
+/*            MENU                   */
+/* --------------------------------- */
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    display: none;
+
+    background-color: lightgray;
+}
+
+.menu__nav-bar {
+    padding: 10px;
+}
+
+.menu__lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.menu__lista-item {
+    margin: 15px 0;
+}
+
+.menu--display {
+    display: block;
+}
+
+/* --------------------------------- */
+/*              RODAPÉ               */
+/* --------------------------------- */
+
+.rodape {
+    display: flex;
+    flex-direction: row;
+    grid-area: rodape;
+    align-content: center;
+    justify-content: center;
+
+    border-top: 1px solid gray;
+}
+
+.rodape table {
+    width: 300px;
+    padding: 10px 0;
+}
