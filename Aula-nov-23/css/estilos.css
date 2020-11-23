@@ -1,0 +1,218 @@
+* {
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #CCC;
+
+}
+
+/* --------------------------------- */
+/*            CONTAINER              */
+/* --------------------------------- */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 15vh 176vh 10vh;
+    grid-template-areas: 
+    "cabecalho cabecalho"
+    "principal lateral"
+    "rodape rodape";
+    
+    font-size: 1.4rem;
+}
+
+/* --------------------------------- */
+/*            CABEÇALHO              */
+/* --------------------------------- */
+
+.cabecalho {
+    grid-area: cabecalho;
+    display: flex;
+    line-height: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: orange;
+}
+
+.cabecalho_tech {
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: black;
+}
+
+.cabecalho_blog {
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: #FFF;
+}
+
+/* --------------------------------- */
+/*               MENU                */
+/* --------------------------------- */
+
+.menu {
+	width: 80%;
+	
+	color: #FFF;
+}
+
+.menu_lista {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	
+	list-style: none;
+}
+
+.menu_item {
+	margin-right: 10px;
+
+	font-size: 0.9rem;
+	color: #FFF;
+}
+
+/* --------------------------------- */
+/*            PRINCIPAL              */
+/* --------------------------------- */
+
+.principal {
+    grid-area: principal;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+}
+
+/* --------------------------------- */
+/*             ARTIGO                */
+/* --------------------------------- */
+
+.artigo {
+	padding: 15px;
+	margin-top: 10px;
+	margin-right: 10px;
+	
+	background-color: #FFF;
+}
+
+.artigo_titulo {
+	margin: 5px 0;
+	
+	color: orange;
+	font-size: 1.2rem;
+}
+
+.artigo_postagem {
+	margin: 5px 0;
+	
+	font-size: 0.8rem;
+}
+
+.artigo_imagem {
+	width: 100%;
+}
+
+.artigo > p {
+	text-align: justify;
+	font-size: 0.9rem;
+}
+.artigo_link {
+	color: orange;
+	font-size: 1rem;
+}
+
+/* --------------------------------- */
+/*           ÁREA LATERAL            */
+/* --------------------------------- */
+
+.lateral {
+	grid-area: lateral;
+	margin-top: 10px;
+	margin-right: 10px;
+	display: flex;
+	flex-direction: column;
+	grid-gap: 20px;
+}
+
+.lateral_postagens {
+	background-color: #FFF;
+}
+
+
+.lateral_postagens_titulo {
+	padding: 5px;
+	margin: 10px;
+	
+	background-color: rgb(180,180,180);
+	border-radius: 3px;
+	font-size: 1.2rem;
+
+}
+.lateral_postagens_paragrafo {
+	margin: 10px;
+	
+	font-size: 1rem;
+}
+
+.lateral_postagens_link {
+	margin: 10px;
+	
+	color: orange;
+	font-size: 1rem;
+	
+}
+
+.lateral_categorias {
+	background-color: #FFF;
+}
+
+.lateral_categorias_titulo {
+	padding: 5px;
+	margin: 10px;
+	
+	background-color: rgb(180,180,180);
+	border-radius: 3px;
+	font-size: 1.2rem;
+}
+
+.lateral_categorias_lista {
+	margin-left: -40px;
+	
+	list-style: none;
+	font-size: 1rem;
+}
+
+.lateral_categorias_link {
+	margin: 10px;
+	
+	color: orange;
+	font-size: 1rem;
+}
+
+/* --------------------------------- */
+/*              RODAPÉ               */
+/* --------------------------------- */
+
+.rodape {
+	grid-area: rodape;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	background-color: rgb(180,180,180);
+	font-size: 1.2rem;
+    color: rgb(100,100,100);
+}
