@@ -5,16 +5,14 @@
 
 var App = App || {};
 
-App.EstadoBotao = (function(){
+App.ToogleMenu = (function(){
 
-    function EstadoBotao() {
+    function ToogleMenu() {
         this.botao = $('.js-botao');
         this.menu = $('.js-menu');
-        this.emitter = $({});
-		this.on = this.emitter.on.bind(this.emitter);
     }
 
-    EstadoBotao.prototype.iniciar = function(){
+    ToogleMenu.prototype.iniciar = function(){
 
          this.botao.on('click', onBotaoPressionado.bind(this)); 
 
@@ -22,11 +20,21 @@ App.EstadoBotao = (function(){
 
     function onBotaoPressionado() {
 
-        this.menu[0].classList.toggle('menu--display');
+    	this.menu.slideToggle(1000, animaMenu.bind(this));
+
+        // this.menu[0].classList.toggle('menu--display');
+
+
 
     }
 
-    return EstadoBotao;
+    function animaMenu() {
+        
+        // this.menu[0].classList.toggle('menu--display');
+
+    }
+
+    return ToogleMenu;
 
 })();
 
@@ -114,8 +122,8 @@ App.Carrossel = (function(){
 
 $(function() {
 	
-	var estadoBotao = new App.EstadoBotao();
-	estadoBotao.iniciar();
+	var toogleMenu = new App.ToogleMenu();
+	toogleMenu.iniciar();
 
 	var carrossel = new App.Carrossel();
 	carrossel.iniciar();

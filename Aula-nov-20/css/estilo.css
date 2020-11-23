@@ -190,7 +190,7 @@ a {
     position: absolute;
     top: 10vh;
     right: 5%;
-    bottom: 0;
+    height: 40vh;
     width: 300px;
     display: none;
 
@@ -215,6 +215,10 @@ a {
 
 .menu--display {
     display: block;
+}
+
+.nome_perfil {
+    margin-top: 5px;
 }
 
 /* --------------------------------- */
