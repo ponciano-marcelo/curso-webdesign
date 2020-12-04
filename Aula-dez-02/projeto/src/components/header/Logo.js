@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Logo = () => {
+function Logo (props) {
+  const mostra = props.mostra;
     return (
-      <div>
-        <h1>Logo</h1>
+      <div className={mostra ? 'logo' : 'logo display'}>
+        <img className="img-logo" src={props.src} alt={props.alt} />
       </div>
     );
 }

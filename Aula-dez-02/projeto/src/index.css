@@ -21,7 +21,12 @@ a {
 .nav a:hover {
     background-color: #666;
 }
-
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #666;
+    color: #FFF;
+}
 
 @media screen and (max-width: 480px) {
     .nav {
@@ -36,6 +41,17 @@ a {
         position: absolute;
         top: 5px;
         right: 10px;
+    }
+    .logo {
+        display: none;
+        justify-content: center;
+        background-color: #000;
+    }
+    .display {
+        display: flex;
+    }
+    .img-logo {
+        height: 50px;
     }
 }
 
@@ -52,29 +68,67 @@ a {
         top: 5px;
         right: 10px;
     }
+    .logo {
+        display: none;
+        justify-content: center;
+        background-color: #000;
+    }
+    .display {
+        display: flex;
+    }
+    .img-logo {
+        height: 50px;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1199px) {
     .nav {
         display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 55px;
     }
     .nav a {
         width: 25%;
     }
     .buttonmob {
         display: none;
+    }
+    .logo {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+    }
+    .display {
+        display: flex;
+    }
+    .img-logo {
+        height: 50px;
     }
 }
 
 @media screen and (min-width: 1200px) {
     .nav {
         display: flex;
-
+        flex-direction: row;
+        align-items: center;
+        height: 55px;
     }
     .nav a {
         width: 25%;
     }
     .buttonmob {
         display: none;
+    }
+    .logo {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+    }
+    .display {
+        display: flex;
+    }
+    .img-logo {
+        height: 50px;
     }
 }
