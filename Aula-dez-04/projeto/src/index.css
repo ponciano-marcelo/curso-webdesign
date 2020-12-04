@@ -8,6 +8,8 @@ a {
     text-decoration: none;
 }
 
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 .nav {
     background-color: #000;
 }
@@ -24,6 +26,9 @@ a {
 .footer {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 50px;
+
     background-color: #666;
     color: #FFF;
 }
@@ -53,6 +58,9 @@ a {
     .img-logo {
         height: 50px;
     }
+    .image-gallery {
+        margin-top: 55px;
+    }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -78,6 +86,9 @@ a {
     }
     .img-logo {
         height: 50px;
+    }
+    .image-gallery {
+        margin-top: 55px;
     }
 }
 
@@ -105,6 +116,9 @@ a {
     .img-logo {
         height: 50px;
     }
+    .image-gallery {
+        margin-top: 5px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -130,5 +144,8 @@ a {
     }
     .img-logo {
         height: 50px;
+    }
+    .image-gallery {
+        margin-top: 5px;
     }
 }

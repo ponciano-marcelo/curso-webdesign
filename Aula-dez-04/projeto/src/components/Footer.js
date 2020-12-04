@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
     return (
         <div className="footer">
-            <h6>Todos os diretos reservados.</h6>
+            <h3>Todos os diretos reservados.</h3>
         </div>
     );
 }
